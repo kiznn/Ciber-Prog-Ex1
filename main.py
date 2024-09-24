@@ -5,14 +5,13 @@ lottery = Lottery()
 # Main program
 while True:
    try:
-       quantidade = int(input('Quantas? '))
+       quantas = int(input('Quantas? '))
        break
    except ValueError:
        print('Digite um número')
 
 nums = []
 starss = []
-quantas = quantidade
 
 while quantas > 0:
     # Generate lottery numbers and stars
@@ -24,7 +23,7 @@ while quantas > 0:
 
         results = [nums, starss]
 
-        quantas -= 1  # Decrement the counter as we have added a valid entry
+        quantas -= 1
 
         print(f'Todos os resultados até agora: {results}')
     else:
