@@ -11,24 +11,23 @@ while True:
        print('Digite um número')
 
 nums = []
+starss = []
 quantas = quantidade
 
 while quantas > 0:
-    numeros = lottery.create_arrays()
+    # Generate lottery numbers and stars
+    numeros, stars = lottery.create_arrays()
 
-    duplicado = False
-
-    for num in nums:
-        if num == numeros:
-            duplicado = True
-            break
-
-    if not duplicado:
+    if numeros not in nums and stars not in starss:
         nums.append(numeros)
-        quantas -= 1
-    else:
-        print(f'{numeros} é duplicado')
-        continue
+        starss.append(stars)
 
-    print(nums)
+        results = [nums, starss]
+
+        quantas -= 1  # Decrement the counter as we have added a valid entry
+
+        print(f'Todos os resultados até agora: {results}')
+    else:
+        print(f'{numeros} ou {stars} são duplicados, gerando novamente...')
+
     input("Press Enter to continue...")
