@@ -32,4 +32,3 @@ while quantas > 0:
 
     print(nums)
     input("Press Enter to continue...")
-
