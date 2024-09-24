@@ -1,3 +1,8 @@
+"""
+What doesn't kill you, Makes you drunker...
+"""
+
+
 from lottery import Lottery
 
 lottery = Lottery()
